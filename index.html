@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gauri Patil | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Gauri Patil</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" target="_blank">Resume</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60" alt="Working at laptop">
+    <div class="hero-text">
+      <h1>Hi, I'm <span style="color:var(--accent)">Gauri Patil</span></h1>
+      <p>B.Tech Student (Enrollment No: 202403103510418)<br>
+      Passionate about creating responsive, elegant, and user-friendly websites using modern web technologies. Always eager to learn and build something beautiful.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">HTML</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">CSS</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">JavaScript</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png">React</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/919/919830.png">MySQL</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1606813902859-0a5a404f9d63?auto=format&fit=crop&w=900&q=60" alt="Watch Store">
+        <h4>Watch Store Admin Panel</h4>
+        <p>Admin dashboard to manage watch products, orders, and users. Developed using HTML, CSS, JS, and PHP with a MySQL backend.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=900&q=60" alt="Deep Nursery">
+        <h4>Deep Nursery Website</h4>
+        <p>Website for plant nursery management — track plants, orders, and customers. Built using PHP and MySQL with a clean admin UI.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=60" alt="Portfolio Website">
+        <h4>Portfolio Website</h4>
+        <p>This personal portfolio built using HTML, CSS, and JavaScript. Hosted on GitHub Pages to showcase projects and achievements.</p>
+        <a href="#">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:gauripatil@example.com">gauripatil@example.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/gauripatil</a></p>
+    </div>
+
+    <form class="contact-form" onsubmit="return handleFormSubmit(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div style="text-align:center;">
+      <a href="resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+      <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Gauri Patil | Designed with ❤ and creativity</p>
+  </footer>
+</body>
+</html>
