@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gauri Patil | Portfolio</title>
+  <style>
+    :root { --accent:#0ea5a4; --text:#333; --bg:#ffffff; --muted:#6b7280; }
+    * { box-sizing:border-box; margin:0; padding:0; font-family:'Poppins', sans-serif; scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--text); }
+
+    /* Header */
+    header { position:sticky; top:0; z-index:1000; background:#fff; display:flex; justify-content:space-between; align-items:center; padding:16px 32px; box-shadow:0 2px 8px rgba(0,0,0,0.05); transition:0.3s; }
+    header h1 { font-size:1.4rem; color:var(--accent); }
+    nav { display:flex; flex-wrap:wrap; align-items:center; }
+    nav a { margin:0 10px; color:var(--muted); text-decoration:none; font-weight:500; transition:0.3s; }
+    nav a:hover { color:var(--accent); }
+
+    /* Sections */
+    section { max-width:1200px; margin:auto; padding:60px 20px; }
+    h2 { color:var(--accent); margin-bottom:12px; font-size:1.8rem; text-align:center; }
+
+    /* Hero */
+    .hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:40px; }
+    .hero img { width:340px; border-radius:20px; box-shadow:0 4px 20px rgba(0,0,0,0.1); transition:0.4s; }
+    .hero img:hover { transform:scale(1.03); }
+    .hero-text { flex:1; min-width:260px; text-align:left; }
+    .hero-text h1 { font-size:2.3rem; color:#111; margin-bottom:10px; }
+    .hero-text p { color:var(--muted); line-height:1.7; font-size:1.05rem; }
+
+    /* Skills */
+    .skills-list { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:20px; }
+    .skill { background:#fff; border:1px solid #eee; box-shadow:0 3px 10px rgba(0,0,0,0.05); padding:10px 14px; border-radius:12px; display:flex; align-items:center; gap:8px; transition:0.3s; font-weight:500; }
+    .skill:hover { transform:translateY(-4px); box-shadow:0 6px 20px rgba(0,0,0,0.1); }
+    .skill img { width:22px; height:22px; }
+
+    /* Projects */
+    .project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; margin-top:25px; }
+    .project { background:#fff; border-radius:14px; box-shadow:0 4px 15px rgba(0,0,0,0.08); overflow:hidden; transition:0.3s; display:flex; flex-direction:column; justify-content:space-between; }
+    .project:hover { transform:translateY(-6px); box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+    .project img { width:100%; height:200px; object-fit:cover; }
+    .project h4 { margin:12px; color:#111; font-size:1.2rem; }
+    .project p { margin:0 12px 14px 12px; color:var(--muted); line-height:1.5; font-size:0.95rem; }
+    .project a { display:inline-block; margin:0 0 16px 12px; background:var(--accent); color:white; padding:8px 14px; border-radius:8px; text-decoration:none; font-weight:500; align-self:flex-start; transition:0.3s; }
+    .project a:hover { background:#099; }
+
+    /* Contact */
+    .contact-info { margin-bottom:20px; font-size:1.05rem; text-align:center; }
+    .contact-form { display:flex; flex-direction:column; gap:12px; background:#fff; padding:20px; border-radius:14px; box-shadow:0 4px 10px rgba(0,0,0,0.05); max-width:600px; margin:auto; }
+    input, textarea { border:1px solid #ddd; padding:10px; border-radius:8px; font-size:15px; width:100%; resize:none; }
+    button { background:var(--accent); border:none; color:white; padding:10px; font-size:16px; border-radius:8px; cursor:pointer; transition:0.3s; }
+    button:hover { background:#099; }
+
+    /* Resume Buttons */
+    .resume-btn { display:inline-block; background:var(--accent); color:#fff; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:500; transition:0.3s; margin:10px; }
+    .resume-btn:hover { background:#099; }
+
+    /* Footer */
+    footer { text-align:center; color:var(--muted); padding:40px 20px; background:#fafafa; border-top:1px solid #eee; margin-top:40px; font-size:0.95rem; }
+
+    /* Responsive */
+    @media (max-width:1000px) {
+      header { flex-wrap:wrap; justify-content:center; }
+      .hero-text { text-align:center; }
+      .hero img { width:280px; }
+    }
+    @media (max-width:700px) {
+      .hero { flex-direction:column; text-align:center; }
+      .hero img { width:230px; }
+      nav { display:flex; flex-wrap:wrap; justify-content:center; }
+      section { padding:40px 15px; }
+      h2 { font-size:1.5rem; }
+    }
+    @media (max-width:500px) {
+      header h1 { font-size:1.1rem; }
+      nav a { margin:6px; font-size:0.9rem; }
+      .hero-text h1 { font-size:1.6rem; }
+      .hero-text p { font-size:0.95rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Gauri Patil</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" target="_blank">Resume</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60" alt="Working at laptop">
+    <div class="hero-text">
+      <h1>Hi, I'm <span style="color:var(--accent)">Gauri Patil</span></h1>
+      <p>B.Tech Student (Enrollment No: 202403103510418)<br>
+      Passionate about creating responsive, elegant, and user-friendly websites using modern web technologies. Always eager to learn and build something beautiful.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">HTML</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">CSS</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">JavaScript</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png">React</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/919/919830.png">MySQL</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1606813902859-0a5a404f9d63?auto=format&fit=crop&w=900&q=60" alt="Watch Store">
+        <h4>Watch Store Admin Panel</h4>
+        <p>Admin dashboard to manage watch products, orders, and users. Developed using HTML, CSS, JS, and PHP with a MySQL backend.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=900&q=60" alt="Deep Nursery">
+        <h4>Deep Nursery Website</h4>
+        <p>Website for plant nursery management — track plants, orders, and customers. Built using PHP and MySQL with a clean admin UI.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=60" alt="Portfolio Website">
+        <h4>Portfolio Website</h4>
+        <p>This personal portfolio built using HTML, CSS, and JavaScript. Hosted on GitHub Pages to showcase projects and achievements.</p>
+        <a href="#">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:gauripatil@example.com">gauripatil@example.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/gauripatil</a></p>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div style="text-align:center;">
+      <a href="resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+      <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Gauri Patil | Designed with ❤ and creativity</p>
+  </footer>
+
+  <script>
+    // Simple JavaScript form handler
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if(name && email && message) {
+        alert("Thank you, " + name + "! Your message has been sent successfully.");
+        this.reset();
+      } else {
+        alert("Please fill out all fields before submitting.");
+      }
+    });
+  </script>
+</body>
+</html>
